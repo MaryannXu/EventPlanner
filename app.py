@@ -6,9 +6,9 @@ from spotipy.oauth2 import SpotifyOAuth
 app = Flask(__name__)
 
 # Initialize OpenAI and Spotify API clients
-openai.api_key = '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'
-sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id='8998a20291f146e7afab85de2930444d',
-                                               client_secret='ea8d036482ab4aebbe735cf19d0bfd1a',
+openai.api_key = ''
+sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id='',
+                                               client_secret='',
                                                redirect_uri='http://localhost:5001/',
                                                scope='playlist-modify-public'))
 
