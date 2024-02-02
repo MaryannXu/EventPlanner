@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Planner Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Event Planner Portal</h1>
+    
+    <!-- Event Playlist Generator Section -->
+    <section id="event_playlist_generator">
+        <h2>Event Playlist Generator</h2>
+        <p>Enter details to automatically generate a custom Spotify playlist tailored to the event.</p>
+        <form action="/generate_playlist" method="post">
+            <!-- Existing Form Fields -->
+            <label for="occasion">Type of Occasion and Purpose of Event:</label>
+            <input type="text" id="occasion" name="occasion" required><br><br>
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required><br><br>
+            <label for="datetime">Date and Time:</label>
+            <input type="datetime-local" id="datetime" name="datetime" required><br><br>
+            <label for="mood">Environment/Mood:</label>
+            <input type="text" id="mood" name="mood" required><br><br>
+            <label for="demographics">Demographics:</label>
+            <input type="text" id="demographics" name="demographics" required><br><br>
+            <label for="artists">Artists:</label>
+            <input type="text" id="artists" name="artists" required><br><br>
+            <label for="duration">Duration of the Event (in minutes):</label>
+            <input type="number" id="duration" name="duration" required><br><br>
+            <input type="submit" value="Generate Playlist">
+        </form>
+    </section>
+
+    <!-- Event Workshop Ideas Section -->
+    <section id="event_workshop_ideas">
+        <h2>Event Workshop Ideas</h2>
+        <p>Provide details about your event and the interests of the attendees to generate workshop ideas.</p>
+        <form action="/generate_workshop_ideas" method="post">
+            <label for="purpose">Purpose of Event:</label>
+            <input type="text" id="purpose" name="purpose" required><br><br>
+            <label for="interests">Interests of Attendees:</label>
+            <input type="text" id="interests" name="interests" required><br><br>
+            <input type="submit" value="Generate Workshop Ideas">
+        </form>
+    </section>
+
+    <!-- Automatically Generated Event Itinerary Section -->
+    <section id="event_itinerary">
+        <h2>Automatically Generated Event Itinerary</h2>
+        <p>Enter details to automatically generate an event itinerary.</p>
+        <form action="/generate_itinerary" method="post">
+            <label for="start_date">Start Date:</label>
+            <input type="date" id="start_date" name="start_date" required><br><br>
+            <label for="start_time">Start Time:</label>
+            <input type="time" id="start_time" name="start_time" required><br><br>
+            <label for="end_date">End Date:</label>
+            <input type="date" id="end_date" name="end_date" required><br><br>
+            <label for="end_time">End Time:</label>
+            <input type="time" id="end_time" name="end_time" required><br><br>
+            <label for="event_name">Name of Event:</label>
+            <input type="text" id="event_name" name="event_name" required><br><br>
+            <label for="speakers_workshops">Speakers/Workshops:</label>
+            <textarea id="speakers_workshops" name="speakers_workshops" required></textarea><br><br>
+            <input type="submit" value="Generate Itinerary">
+        </form>
+    </section>
+
+    <!-- Connect with Possible Sponsors Section -->
+    <section id="possible_sponsors">
+        <h2>Connect with Possible Sponsors</h2>
+        <p>Provide event details to connect with potential sponsors.</p>
+        <form action="/connect_with_sponsors" method="post">
+            <label for="event_name">Name of Event:</label>
+            <input type="text" id="event_name" name="event_name" required><br><br>
+            <label for="event_purpose">Purpose of Event:</label>
+            <textarea id="event_purpose" name="event_purpose" required></textarea><br><br>
+            <label for="current_sponsors">Sponsors You Have Already:</label>
+            <input type="text" id="current_sponsors" name="current_sponsors" ><br><br>
+            <label for="event_location">Location of Event:</label>
+            <input type="text" id="event_location" name="event_location" required><br><br>
+            <input type="submit" value="Connect with Sponsors">
+        </form>
+    </section>
+
+</body>
+</html>
+

@@ -1,0 +1,59 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 auto; /* Centers the content horizontally */
+    max-width: 800px; /* Limits the width of content */
+    padding: 0 20px; /* Adds left and right margins */
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+section {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+input[type="datetime-local"],
+input[type="date"],
+input[type="time"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+p {
+    margin-bottom: 10px;
+    text-align: center; /* Centers the text within paragraphs */
+}
